@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2480 3508" width="2480" height="3508">
+  <!-- Mint Green Background (A4 Proportion) -->
+  <rect width="2480" height="3508" fill="#3BB496" />
+  
+  <!-- Subtle decorative elements -->
+  <circle cx="2100" cy="400" r="1200" fill="#2C9278" opacity="0.2" />
+  <circle cx="200" cy="2800" r="900" fill="#5CC8AD" opacity="0.3" />
+
+  <!-- Admission Open Badge -->
+  <rect x="440" y="200" width="1600" height="250" rx="125" fill="#FFFFFF" />
+  <text x="1240" y="365" font-family="Arial, sans-serif" font-size="120" font-weight="bold" fill="#14183E" text-anchor="middle" letter-spacing="8">ADMISSIONS OPEN</text>
+
+  <!-- Main Headline -->
+  <text x="1240" y="700" font-family="Arial, sans-serif" font-size="160" font-weight="900" fill="#14183E" text-anchor="middle">IIT-JEE [MAINS + ADVANCED]</text>
+  <text x="1240" y="900" font-family="Arial, sans-serif" font-size="140" font-weight="900" fill="#14183E" text-anchor="middle">FOUNDATION BATCHES</text>
+
+  <!-- Modes Badge -->
+  <rect x="640" y="1050" width="1200" height="180" rx="40" fill="#FFFFFF" />
+  <text x="1240" y="1170" font-family="Arial, sans-serif" font-size="90" font-weight="bold" fill="#14183E" text-anchor="middle">ONLINE &amp; OFFLINE</text>
+
+  <!-- Classes Section Container -->
+  <rect x="340" y="1350" width="1800" height="400" rx="50" fill="#14183E" />
+  <text x="1240" y="1470" font-family="Arial, sans-serif" font-size="70" font-weight="bold" fill="#3BB496" text-anchor="middle" letter-spacing="4">BATCHES AVAILABLE</text>
+  
+  <!-- Classes List -->
+  <text x="500" y="1580" font-family="Arial, sans-serif" font-size="65" font-weight="bold" fill="#FFFFFF" text-anchor="start">✔ Class 11th &amp; 12th (JEE)</text>
+  <text x="1350" y="1580" font-family="Arial, sans-serif" font-size="65" font-weight="bold" fill="#FFFFFF" text-anchor="start">✔ Dropper Batch</text>
+  
+  <text x="500" y="1680" font-family="Arial, sans-serif" font-size="65" font-weight="bold" fill="#FFFFFF" text-anchor="start">✔ Class 9th-10th (Neev)</text>
+  <text x="1350" y="1680" font-family="Arial, sans-serif" font-size="65" font-weight="bold" fill="#FFFFFF" text-anchor="start">✔ 1-on-1 Mentorship</text>
+
+  <!-- Image Placeholder (Canva user can replace this with Dr. Tanwar's photo) -->
+  <circle cx="1240" cy="2250" r="400" fill="#14183E" opacity="0.1" />
+  <text x="1240" y="2270" font-family="Arial, sans-serif" font-size="55" font-weight="bold" fill="#14183E" text-anchor="middle">DR. TANWAR PHOTO</text>
+
+  <!-- Brand Name -->
+  <text x="1240" y="2800" font-family="Arial, sans-serif" font-size="190" font-weight="900" fill="#14183E" text-anchor="middle">DR TANWAR SIR MATHS</text>
+
+  <!-- Credentials line -->
+  <text x="1240" y="3000" font-family="Arial, sans-serif" font-size="65" font-weight="bold" fill="#FFFFFF" text-anchor="middle">Ph.D. IN MATHEMATICS  •  12+ YEARS EXP.  •  TOP 100 RANKERS</text>
+
+  <!-- Footer Bar -->
+  <rect x="0" y="3158" width="2480" height="350" fill="#14183E" />
+  
+  <text x="750" y="3370" font-family="Arial, sans-serif" font-size="90" font-weight="bold" fill="#FFFFFF" text-anchor="middle">www.drtanwarsirmaths.com</text>
+  
+  <text x="1950" y="3370" font-family="Arial, sans-serif" font-size="100" font-weight="bold" fill="#FFFFFF" text-anchor="middle">📞 8118853033</text>
+</svg>

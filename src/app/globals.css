@@ -2,15 +2,15 @@
 
 /* ─── Design Tokens ─── */
 :root {
-  /* Primary palette - Navy / Midnight */
-  --primary: #1D2E4E;
-  --primary-light: #305869;
-  --primary-dark: #0F1B34;
+  /* Primary palette - Deep Navy (from image) */
+  --primary: #14183E;
+  --primary-light: #2A2F5A;
+  --primary-dark: #0A0C22;
 
-  /* Accent palette - Teal Green */
-  --accent: #2EB394;
-  --accent-light: #60C7AE;
-  --accent-dark: #228a73;
+  /* Accent palette - Mint Green (from image) */
+  --accent: #3BB496;
+  --accent-light: #5CC8AD;
+  --accent-dark: #2C9278;
 
   /* Mint (decorative) */
   --mint: #9ECDC6;
@@ -40,12 +40,12 @@
    CSS rules directly and also forwarded here as static strings for Tailwind
    utility generation (font-heading, font-body utilities). */
 @theme inline {
-  --color-primary: #1D2E4E;
-  --color-primary-light: #305869;
-  --color-primary-dark: #0F1B34;
-  --color-accent: #2EB394;
-  --color-accent-light: #60C7AE;
-  --color-accent-dark: #228a73;
+  --color-primary: #14183E;
+  --color-primary-light: #2A2F5A;
+  --color-primary-dark: #0A0C22;
+  --color-accent: #3BB496;
+  --color-accent-light: #5CC8AD;
+  --color-accent-dark: #2C9278;
   --color-mint: #9ECDC6;
   --color-background: #F5F8F8;
   --color-background-alt: #E8F2F1;

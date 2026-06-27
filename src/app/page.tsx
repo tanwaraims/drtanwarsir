@@ -236,6 +236,49 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ─── HIGHLIGHT BANNER ─── */}
+      <section className="bg-primary pb-8 md:pb-12 pt-4 relative z-20">
+        <div className="container">
+          <div className="bg-gradient-to-r from-primary-dark to-primary border border-white/10 rounded-2xl p-5 md:p-6 shadow-2xl overflow-hidden relative flex flex-col xl:flex-row items-center justify-between gap-6 xl:gap-10">
+            {/* Background grid */}
+            <div 
+              className="absolute inset-0 opacity-[0.03]" 
+              style={{ backgroundImage: "linear-gradient(white 1px, transparent 1px), linear-gradient(90deg, white 1px, transparent 1px)", backgroundSize: "24px 24px" }}
+            />
+            {/* Wavy accent graphic on the right */}
+            <div className="absolute right-0 bottom-0 w-48 h-full bg-accent/20 [clip-path:polygon(100%_0,100%_100%,0_100%,15%_60%,25%_40%,0_0)] rounded-r-2xl pointer-events-none hidden md:block" />
+            <div className="absolute right-0 top-0 w-24 h-full bg-accent/30 [clip-path:polygon(100%_0,100%_100%,50%_100%,80%_50%,50%_0)] rounded-r-2xl pointer-events-none hidden md:block" />
+
+            {/* Left Side: Icon & Text */}
+            <div className="flex flex-col sm:flex-row items-center sm:items-start xl:items-center gap-5 relative z-10 text-center sm:text-left w-full xl:w-auto">
+              <div className="w-14 h-14 rounded-xl bg-gradient-to-b from-accent to-accent-dark flex flex-col items-center justify-center shrink-0 border border-accent-light shadow-inner shadow-white/20">
+                <div className="w-full h-3 bg-white/20 rounded-t-xl mb-1 flex justify-evenly items-center px-2">
+                  <div className="w-1.5 h-1.5 rounded-full bg-white/50" />
+                  <div className="w-1.5 h-1.5 rounded-full bg-white/50" />
+                </div>
+                <span className="text-xl font-heading font-extrabold text-white leading-none pb-1">26</span>
+              </div>
+              <p className="text-white font-medium text-lg md:text-xl xl:text-2xl leading-snug">
+                Class 11th &amp; 12th <span className="bg-accent text-white px-2.5 py-0.5 rounded shadow-sm inline-block -rotate-1 ml-1 mr-1">Foundation Courses</span> for 2026-27 Are Now Live
+              </p>
+            </div>
+            
+            {/* Right Side: Button & Offer */}
+            <div className="flex flex-col sm:flex-row items-center justify-center sm:justify-start gap-4 sm:gap-6 relative z-10 shrink-0 w-full xl:w-auto">
+              <Link href="/courses" className="bg-accent hover:bg-accent-light text-white font-bold px-8 py-3.5 rounded-lg shadow-[0_4px_20px_rgba(46,179,148,0.4)] hover:shadow-[0_6px_25px_rgba(46,179,148,0.6)] transition-all w-full sm:w-auto text-center transform hover:-translate-y-0.5 whitespace-nowrap text-base">
+                Enroll Now
+              </Link>
+              <div className="text-center sm:text-left hidden lg:block border-l border-white/20 pl-6 py-1">
+                <p className="text-white/90 font-semibold text-sm leading-relaxed">
+                  Join Now with a<br/>
+                  <span className="text-accent text-base font-bold">20% early bird</span> discount
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ─── STATS BAR ─── */}
       <section className="bg-white border-b border-border py-6 md:py-8">
         <div className="container">
@@ -304,16 +347,7 @@ export default function HomePage() {
                     </li>
                   ))}
                 </ul>
-                <div className="border-t border-border pt-4 flex items-end justify-between">
-                  <div>
-                    <span className="text-xs text-foreground-muted">from </span>
-                    <span className="text-2xl font-heading font-bold text-primary">
-                      &#8377;{course.pricing.online.toLocaleString()}
-                    </span>
-                    <span className="text-sm text-foreground-muted">
-                      /mo
-                    </span>
-                  </div>
+                <div className="border-t border-border pt-4 flex justify-end">
                   <Link
                     href={`/courses#${course.id}`}
                     className="text-sm font-semibold text-accent hover:text-accent-dark transition-colors flex items-center gap-1"

@@ -14,7 +14,7 @@ import { COURSES, MODES, SITE_CONFIG } from "@/lib/data";
 export const metadata: Metadata = {
   title: "Courses - Best Maths Teacher for JEE, NEET & Foundation",
   description:
-    "Explore IIT-JEE Maths batches by the best maths teacher, Dr. Tanwar Sir. Live + Offline + Hybrid in Kota. Starting ₹1,499/month.",
+    "Explore IIT-JEE Maths batches by the best maths teacher, Dr. Tanwar Sir. Live + Offline classes in Kota.",
 };
 
 /* Icon name → component map for MODES */
@@ -114,12 +114,6 @@ export default function CoursesPage() {
                         {course.schedule.online}
                       </p>
                     </div>
-                    <div className="text-right">
-                      <p className="font-heading font-bold text-accent text-lg">
-                        &#8377;{course.pricing.online.toLocaleString()}
-                      </p>
-                      <p className="text-foreground-muted text-xs">/month</p>
-                    </div>
                   </div>
                   <a
                     href={course.whatsappLinks.online}
@@ -146,12 +140,6 @@ export default function CoursesPage() {
                         {course.schedule.offline}
                       </p>
                     </div>
-                    <div className="text-right">
-                      <p className="font-heading font-bold text-accent text-lg">
-                        &#8377;{course.pricing.offline.toLocaleString()}
-                      </p>
-                      <p className="text-foreground-muted text-xs">/month</p>
-                    </div>
                   </div>
                   <a
                     href={course.whatsappLinks.offline}
@@ -162,33 +150,7 @@ export default function CoursesPage() {
                     Enroll Offline <ArrowRight className="w-3.5 h-3.5" />
                   </a>
                 </div>
-                {/* Hybrid */}
-                <div className="card card-sm">
-                  <div className="flex items-start justify-between mb-3">
-                    <div>
-                      <p className="font-heading font-semibold text-primary text-sm">
-                        Hybrid (Online + Offline)
-                      </p>
-                      <p className="text-foreground-muted text-xs">
-                        Both modes included
-                      </p>
-                    </div>
-                    <div className="text-right">
-                      <p className="font-heading font-bold text-accent text-lg">
-                        &#8377;{course.pricing.hybrid.toLocaleString()}
-                      </p>
-                      <p className="text-foreground-muted text-xs">/month</p>
-                    </div>
-                  </div>
-                  <a
-                    href={course.whatsappLinks.hybrid}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1 text-sm font-semibold text-accent hover:text-accent-dark transition-colors"
-                  >
-                    Enroll Hybrid <ArrowRight className="w-3.5 h-3.5" />
-                  </a>
-                </div>
+
               </div>
             </div>
           </div>
@@ -225,9 +187,7 @@ export default function CoursesPage() {
                 ))}
               </div>
               <div className="text-center mt-8 flex flex-col sm:flex-row gap-4 justify-center">
-                <span className="text-white/60 text-sm self-center">
-                  From &#8377;{mentorship.pricing.online.toLocaleString()}/mo
-                </span>
+
                 <a
                   href={mentorship.whatsappLinks.online}
                   target="_blank"
@@ -268,12 +228,7 @@ export default function CoursesPage() {
                   <h3 className="font-heading font-bold text-primary text-lg mb-2">
                     {mode.title}
                   </h3>
-                  <p className="mb-4">
-                    <span className="font-heading font-bold text-primary text-2xl">
-                      &#8377;{mode.priceFrom.toLocaleString()}
-                    </span>
-                    <span className="text-foreground-muted text-sm">/month onwards</span>
-                  </p>
+
                   <ul className="space-y-2 mb-6 text-left">
                     {mode.features.map((f) => (
                       <li

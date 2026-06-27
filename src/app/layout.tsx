@@ -96,7 +96,6 @@ const localBusinessSchema = {
     addressRegion: "Rajasthan",
     addressCountry: "IN",
   },
-  priceRange: "₹2,999 - ₹6,999/month",
   openingHours: "Mo-Sa 08:00-21:00",
   areaServed: "India",
 };

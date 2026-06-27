@@ -410,17 +410,7 @@ export const MODES = [
     ],
     popular: true,
   },
-  {
-    icon: "Layers",
-    title: "Hybrid",
-    priceFrom: 3499,
-    features: [
-      "Online + Offline Access",
-      "All Recordings + Live",
-      "Personal Mentorship",
-      "Detailed Reports",
-    ],
-  },
+
 ];
 
 // ============================================================
@@ -550,7 +540,6 @@ export const FORM_COURSE_OPTIONS = [
 export const FORM_MODE_OPTIONS = [
   "Online Live Classes",
   "Offline - Kota Centre",
-  "Hybrid (Both)",
 ];
 
 // ============================================================
@@ -558,32 +547,45 @@ export const FORM_MODE_OPTIONS = [
 // ============================================================
 export const NAV_ITEMS = [
   { label: "Home", href: "/" },
-  { label: "About", href: "/about" },
-  {
-    label: "Courses",
-    href: "/courses",
+  { 
+    label: "11th JEE", 
+    href: "/courses#lakshya",
     children: [
-      { label: "Neev Udaan (Class 9-10)", href: "/courses#neev-udaan" },
-      { label: "Lakshya (Class 11)", href: "/courses#lakshya" },
-      { label: "Vijay (Class 12)", href: "/courses#vijay" },
-      { label: "Shikhar JEE (11+12)", href: "/courses#shikhar-jee" },
-      { label: "Dropper Batch", href: "/courses#dropper" },
-      { label: "One-on-One Mentorship", href: "/courses#one-to-one" },
-    ],
+      { label: "Lakshya Batch (1 Year)", href: "/courses#lakshya" },
+      { label: "Shikhar JEE (2 Year)", href: "/courses#shikhar-jee" },
+    ]
   },
-  { label: "Contact", href: "/contact" },
+  { 
+    label: "12th JEE", 
+    href: "/courses#vijay",
+    children: [
+      { label: "Vijay Batch (Class 12)", href: "/courses#vijay" },
+      { label: "Shikhar JEE (11+12)", href: "/courses#shikhar-jee" },
+    ]
+  },
+  { label: "Dropper", href: "/courses#dropper" },
+  { label: "1-on-1 Live", href: "/courses#one-to-one" },
+  { label: "Class 9th-10th", href: "/courses#neev-udaan" },
+  { 
+    label: "More", 
+    href: "#",
+    children: [
+      { label: "About Us", href: "/about" },
+      { label: "All Courses", href: "/courses" },
+      { label: "Contact Us", href: "/contact" },
+    ]
+  }
 ];
 
 // ============================================================
 // FOOTER LINKS
 // ============================================================
 export const FOOTER_COURSE_LINKS = [
-  { label: "Neev Udaan Batch", href: "/courses#neev-udaan" },
-  { label: "Lakshya Batch", href: "/courses#lakshya" },
-  { label: "Vijay Batch", href: "/courses#vijay" },
-  { label: "Shikhar JEE", href: "/courses#shikhar-jee" },
+  { label: "11th JEE (Lakshya & Shikhar)", href: "/courses#lakshya" },
+  { label: "12th JEE (Vijay & Shikhar)", href: "/courses#vijay" },
   { label: "Dropper Batch", href: "/courses#dropper" },
-  { label: "One-on-One Mentorship", href: "/courses#one-to-one" },
+  { label: "1-on-1 Live Mentorship", href: "/courses#one-to-one" },
+  { label: "Class 9th-10th (Neev)", href: "/courses#neev-udaan" },
 ];
 
 export const FOOTER_QUICK_LINKS = [
