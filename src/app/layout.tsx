@@ -111,7 +111,6 @@ export default function RootLayout({
       className={`${poppins.variable} ${inter.variable} h-full antialiased`}
     >
       <head>
-        <link rel="icon" href="/favicon.ico" />
       </head>
       <body className="min-h-full flex flex-col">
         <Header />
