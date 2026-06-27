@@ -1,0 +1,285 @@
+@import "tailwindcss";
+
+/* ─── Design Tokens ─── */
+:root {
+  /* Primary palette - Navy / Midnight */
+  --primary: #1D2E4E;
+  --primary-light: #305869;
+  --primary-dark: #0F1B34;
+
+  /* Accent palette - Teal Green */
+  --accent: #2EB394;
+  --accent-light: #60C7AE;
+  --accent-dark: #228a73;
+
+  /* Mint (decorative) */
+  --mint: #9ECDC6;
+
+  /* Backgrounds */
+  --background: #F5F8F8;
+  --background-alt: #E8F2F1;
+
+  /* Text */
+  --foreground: #1D2E4E;
+  --foreground-muted: #90A0AD;
+
+  /* Borders */
+  --border: #C8D8D8;
+
+  /* Utility */
+  --success: #2EB394;
+  --whatsapp: #25d366;
+
+  /* Slate accent */
+  --slate: #305869;
+}
+
+/* ─── Tailwind v4 theme tokens ─── */
+/* NOTE: @theme inline tokens must use static values, not var() references,
+   because @theme resolves at build time. Font families are set via body/h* 
+   CSS rules directly and also forwarded here as static strings for Tailwind
+   utility generation (font-heading, font-body utilities). */
+@theme inline {
+  --color-primary: #1D2E4E;
+  --color-primary-light: #305869;
+  --color-primary-dark: #0F1B34;
+  --color-accent: #2EB394;
+  --color-accent-light: #60C7AE;
+  --color-accent-dark: #228a73;
+  --color-mint: #9ECDC6;
+  --color-background: #F5F8F8;
+  --color-background-alt: #E8F2F1;
+  --color-foreground: #1D2E4E;
+  --color-foreground-muted: #90A0AD;
+  --color-border: #C8D8D8;
+  --color-success: #2EB394;
+  --color-whatsapp: #25d366;
+  --color-slate: #305869;
+
+  /* Font families - these generate font-heading / font-body utilities.
+     The actual values come from Next.js CSS variables set on <html>. */
+  --font-heading: var(--font-poppins), "Poppins", system-ui, sans-serif;
+  --font-body: var(--font-inter), "Inter", system-ui, sans-serif;
+}
+
+/* ─── Base Reset ─── */
+@layer base {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+  }
+
+  body {
+    overflow-x: hidden;
+    background: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-inter), "Inter", system-ui, -apple-system, sans-serif;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* ─── Headings - base styles only, NO size overrides (Tailwind handles sizes) ─── */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-poppins), "Poppins", system-ui, sans-serif;
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--primary);
+    margin: 0;
+  }
+}
+
+/* ─── Layout ─── */
+@layer components {
+  .section-padding {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  @media (max-width: 768px) {
+    .section-padding {
+      padding-top: 48px;
+      padding-bottom: 48px;
+    }
+  }
+
+  /* Extra bottom padding on mobile to avoid content hidden by fixed bottom bar */
+  @media (max-width: 1024px) {
+    main {
+      padding-bottom: 68px;
+    }
+  }
+
+  /* Scoped container - avoids conflict with Tailwind's built-in .container utility */
+  .site-container,
+  .container {
+    width: 100%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  @media (max-width: 480px) {
+    .site-container,
+    .container {
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+  }
+
+  /* ─── Buttons ─── */
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: var(--primary);
+    color: #fff;
+    padding: 12px 28px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 1rem;
+    text-decoration: none;
+    border: 2px solid var(--primary);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+  }
+
+  .btn-primary:hover {
+    background: var(--primary-light);
+    border-color: var(--primary-light);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(29, 46, 78, 0.3);
+  }
+
+  .btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: transparent;
+    color: var(--primary);
+    padding: 12px 28px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 1rem;
+    text-decoration: none;
+    border: 2px solid var(--primary);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+  }
+
+  .btn-secondary:hover {
+    background: var(--primary);
+    color: #fff;
+    transform: translateY(-1px);
+  }
+
+  .btn-accent {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: var(--accent);
+    color: #fff;
+    padding: 12px 28px;
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 1rem;
+    text-decoration: none;
+    border: 2px solid var(--accent);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+  }
+
+  .btn-accent:hover {
+    background: var(--accent-light);
+    border-color: var(--accent-light);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(46, 179, 148, 0.35);
+  }
+
+  /* ─── Section Typography Helpers ─── */
+  .section-label {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--accent-dark);
+    background: rgba(46, 179, 148, 0.12);
+    padding: 6px 16px;
+    border-radius: 20px;
+    margin-bottom: 16px;
+  }
+
+  .section-title {
+    font-family: var(--font-poppins), "Poppins", system-ui, sans-serif;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 16px;
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    line-height: 1.2;
+  }
+
+  .section-subtitle {
+    font-size: 1.125rem;
+    color: var(--foreground-muted);
+    max-width: 640px;
+    margin: 0 auto 48px;
+    line-height: 1.7;
+  }
+
+  /* ─── Cards ─── */
+  .card {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 28px;
+    transition: all 0.3s ease;
+  }
+
+  /* Compact card - used in Why Choose Us and Testimonials sections */
+  .card-sm {
+    padding: 20px;
+  }
+
+  .card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(29, 46, 78, 0.1);
+    border-color: var(--accent);
+  }
+
+  /* Button size variants */
+  .btn-sm {
+    padding: 10px 20px;
+    font-size: 0.875rem;
+  }
+}
+
+/* ─── Utility: prevent long words / URLs from breaking layout ─── */
+@layer utilities {
+  p, li, span {
+    overflow-wrap: break-word;
+    word-break: break-word;
+  }
+
+  /* ─── Decorative math symbols in hero - ensure they don't cause overflow ─── */
+  .math-symbol {
+    pointer-events: none;
+    user-select: none;
+    overflow: hidden;
+  }
+}

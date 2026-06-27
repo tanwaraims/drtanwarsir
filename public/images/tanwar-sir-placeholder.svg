@@ -1,0 +1,8 @@
+<svg width="400" height="500" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="500" fill="#0f2044"/>
+  <circle cx="200" cy="180" r="90" fill="#f5a623" opacity="0.3"/>
+  <text x="200" y="360" font-family="Arial" font-size="20" 
+    fill="white" text-anchor="middle">Dr. Tanwar Sir</text>
+  <text x="200" y="390" font-family="Arial" font-size="14" 
+    fill="#f5a623" text-anchor="middle">Photo Coming Soon</text>
+</svg>
