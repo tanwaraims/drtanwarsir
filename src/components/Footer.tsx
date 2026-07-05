@@ -137,9 +137,16 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div className="border-t border-white/10 pt-6 flex flex-col sm:flex-row justify-between items-center gap-3">
-          <p className="text-xs text-white/50">
-            &copy; {new Date().getFullYear()} {SITE_CONFIG.name}. All rights
-            reserved.
+          <p className="text-xs text-white/50 flex items-center flex-wrap">
+            <span>&copy; {new Date().getFullYear()} {SITE_CONFIG.name}. All rights reserved.</span>
+            <a 
+              href="https://portfolio-ivory-three-53.vercel.app/" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="opacity-5 hover:opacity-100 hover:text-accent transition-all duration-500 ml-1 sm:ml-2"
+            >
+              Created by Lakshya Agarwal
+            </a>
           </p>
           <div className="flex gap-4 text-xs text-white/50">
             <Link href="/privacy" className="hover:text-white/80 transition-colors">
